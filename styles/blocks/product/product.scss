@@ -20,6 +20,10 @@
 		padding: 0 50px;
 		margin-bottom: 50px;
 
+		&_popup {
+			padding-left: 0;
+		}
+
 		&_subtitle {
 			margin-bottom: 16px;
 			font-size: 24px;
@@ -45,8 +49,17 @@
 		}
 	}
 
+	&__text-cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
 	&__list {
 		padding-left: 30px;
+
+		&_margin {
+			margin-bottom: 50px;
+		}
 	}
 
 	&__list-item {
@@ -97,6 +110,7 @@
 		color: #28b4f9 !important;
 		text-decoration: none !important;
 		transition: 0.3s;
+		cursor: pointer;
 
 		&:hover {
 			opacity: 0.7;

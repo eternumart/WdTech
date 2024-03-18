@@ -1,4 +1,8 @@
 .page {
     background: #F9FAFB;
     display: flex;
+
+    &_noscroll {
+        overflow: hidden;
+    }
 }
