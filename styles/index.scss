@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin-top: 120px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "./blocks/page/page.scss";
+@import "./blocks/h1-title/h1-title.scss";
+@import "./blocks/h2-title/h2-title.scss";
+@import "./blocks/h3-title/h3-title.scss";
+@import "./blocks/page-wrapper/page-wrapper.scss";
+@import "./blocks/button/button.scss";
+@import "./blocks/header/header.scss";
+@import "./blocks/main/main.scss";
+@import "./blocks/first/first.scss";
+@import "./blocks/preferences/preferences.scss";
+@import "./blocks/materials/materials.scss";
+@import "./blocks/objects/objects.scss";
+@import "./blocks/order/order.scss";
+@import "./blocks/contacts/contacts.scss"

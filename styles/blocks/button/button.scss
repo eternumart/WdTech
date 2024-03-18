@@ -1,0 +1,23 @@
+.button {
+	background: #28b4f9 !important;
+    padding: 12px 40px;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    color: #fff !important;
+    transition: .3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    width: fit-content;
+
+    &:hover {
+        background: #AFD94E !important;
+        color: #000 !important;
+        transition: .3s;
+    }
+}

@@ -1,0 +1,89 @@
+.objects {
+	background: #fff;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	padding: 42px 50px 50px 50px;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	&__slide {
+		display: flex;
+		gap: 20px;
+	}
+
+	.h2-title {
+		margin-bottom: 20px;
+	}
+
+	&__arrow {
+		position: absolute;
+		z-index: 11;
+		width: 11px;
+		height: 24px;
+		cursor: pointer;
+		path {
+			transition: 0.3s;
+		}
+
+		&:hover {
+			path {
+				stroke: #afd94e;
+				transition: 0.3s;
+			}
+		}
+
+		&_left {
+			left: -26px;
+		}
+
+		&_right {
+			right: -26px;
+			transform: rotate(180deg);
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-bottom: 50px;
+		padding-right: 130px;
+	}
+
+	&__text {
+		font-family: Manrope;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	.swiper-pagination {
+		position: relative;
+		margin-top: 30px;
+        top: unset;
+        bottom: unset;
+        height: 8px;
+
+		&-bullet {
+			background: #c4c4c4;
+			width: 8px;
+			height: 8px;
+			margin: 0 5px !important;
+            transition: .3s;
+            border-radius: 6px !important;
+            top: -6px;
+            position: relative;
+		}
+
+		&-bullet-active {
+            background: #afd94e;
+            width: 50px;
+            border-radius: 6px !important;
+            transition: .3s;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+.materials {
+    background: #232323;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 42px 50px 50px 50px;
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        list-style: none;
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+
+            &__top {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}

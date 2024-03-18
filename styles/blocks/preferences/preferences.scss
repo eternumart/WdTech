@@ -1,0 +1,59 @@
+.preferences {
+	background: #fff;
+	border-radius: 20px;
+	padding: 42px 50px 50px 50px;
+    margin-bottom: 20px;
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		list-style: none;
+
+		.card {
+			background: #f9fafb;
+			padding: 20px;
+			border-radius: 20px;
+            transition: .3s;
+
+            svg {
+                transition: 0.3s;
+            }
+            path {
+                transition: .3s;
+            }
+
+			&__top {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 52px;
+			}
+
+			&__text {
+				font-size: 16px;
+				font-family: Manrope;
+				font-weight: 600;
+				line-height: 1.2;
+				color: #151515;
+			}
+
+			&:hover {
+                background: #FFFFFF;
+                transition: .3s;
+				.h3-title {
+					color: #afd94e;
+					transition: 0.3s;
+				}
+                svg {
+                    transform: rotate(45deg);
+                    transition: 0.3s;
+                }
+				path {
+					stroke: #afd94e;
+					transition: 0.3s;
+				}
+			}
+		}
+	}
+}
