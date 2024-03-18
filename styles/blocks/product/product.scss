@@ -1,0 +1,106 @@
+.product {
+	&__heading {
+		background-image: url(../../../images/materials-bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-clip: border-box;
+		width: 100%;
+		padding: 78px 50px;
+		margin-bottom: 20px;
+
+		.h1-title {
+			margin-top: unset;
+			margin-bottom: unset;
+			max-width: 610px;
+		}
+	}
+
+	&__text {
+		@include text;
+		padding: 0 50px;
+		margin-bottom: 50px;
+
+		&_subtitle {
+			margin-bottom: 16px;
+			font-size: 24px;
+		}
+
+		span {
+			font-weight: 800;
+		}
+	}
+
+	&__text-container {
+		@include container;
+		margin-bottom: 50px;
+		background: #e5f2fa;
+
+		.product__text {
+			padding: 0;
+			margin-bottom: 30px;
+
+			&:last-of-type {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__list {
+		padding-left: 30px;
+	}
+
+	&__list-item {
+		@include text;
+	}
+}
+
+.variants {
+	border-radius: 20px;
+	padding: 50px;
+	background: #232323;
+	margin-bottom: 50px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+
+	&__card {
+		background: #fff;
+		border-radius: 20px;
+		padding: 20px 20px 30px 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		&_only-text {
+			justify-content: space-between;
+		}
+	}
+
+	&__image {
+		width: 163px;
+		align-self: center;
+		max-height: 180px;
+		object-fit: contain;
+	}
+
+	.h3-title {
+		margin-bottom: 16px;
+	}
+
+	&__description {
+		@include text;
+		color: #151515;
+	}
+
+	&__link {
+		@include text;
+		color: #28b4f9 !important;
+		text-decoration: none !important;
+		transition: 0.3s;
+
+		&:hover {
+			opacity: 0.7;
+			transition: 0.3s;
+		}
+	}
+}

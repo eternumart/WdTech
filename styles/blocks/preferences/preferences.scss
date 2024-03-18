@@ -1,8 +1,5 @@
 .preferences {
-	background: #fff;
-	border-radius: 20px;
-	padding: 42px 50px 50px 50px;
-    margin-bottom: 20px;
+	@include container;
 
 	&__cards {
 		display: grid;
@@ -31,10 +28,7 @@
 			}
 
 			&__text {
-				font-size: 16px;
-				font-family: Manrope;
-				font-weight: 600;
-				line-height: 1.2;
+				@include text;
 				color: #151515;
 			}
 

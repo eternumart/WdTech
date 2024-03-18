@@ -1,8 +1,6 @@
 .materials {
+    @include container;
     background: #232323;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    padding: 42px 50px 50px 50px;
 
     &__cards {
         display: grid;

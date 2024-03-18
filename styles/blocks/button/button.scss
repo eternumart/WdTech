@@ -1,10 +1,7 @@
 .button {
 	background: #28b4f9 !important;
     padding: 12px 40px;
-    font-family: Manrope;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.2;
+    @include text;
     outline: none;
     border: none;
     border-radius: 12px;

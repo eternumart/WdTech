@@ -27,10 +27,7 @@
 
 	&__link {
 		color: #151515;
-		font-family: Manrope;
-		font-size: 16px;
-		font-weight: 600;
-		line-height: 1.2;
+        @include text;
 		text-decoration: none;
 		transition: 0.3s;
 

@@ -1,0 +1,44 @@
+.about {
+    @include container;
+
+    &__columns{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto 692px;
+    }
+
+    &__text {
+        @include text;
+
+        &_single {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__list {
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    &__list-item {
+        @include text;
+    }
+
+    &__image {
+        width: 100%;
+
+        &_first {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__text-wrapper {
+        max-width: 600px;
+    }
+}
