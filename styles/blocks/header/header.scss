@@ -4,7 +4,6 @@
 	background: #fff;
 	border-radius: 20px;
 	padding: 15px 50px;
-	margin-bottom: 20px;
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
@@ -12,10 +11,114 @@
 	max-width: 1300px;
 	z-index: 100;
 
+	@media screen and (max-width: 1299px) {
+		width: calc(100% - 80px);
+		padding: 15px 30px;
+	}
+
+	@media screen and (max-width: 969px) {
+		padding: 5px 30px;
+		top: 10px;
+	}
+
+	@media screen and (max-width: 719px) {
+		padding: 5px 20px;
+		top: 0;
+		border-radius: 0;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	&__logo_burger {
+		display: none;
+
+		@media screen and (max-width: 969px) {
+			display: block;
+		}
+	}
+
 	&__content {
 		display: flex;
 		align-items: center;
 		gap: 84px;
+
+		@media screen and (max-width: 1299px) {
+			gap: 30px;
+		}
+
+		@media screen and (max-width: 969px) {
+			position: absolute;
+			background: #fff;
+			width: 100vw;
+			height: 100vh;
+			top: -10px;
+			transform: translateX(100%);
+			transition: 0.3s;
+			flex-direction: column;
+			padding: 50px;
+			justify-content: space-between;
+
+			&_opened {
+				transform: translateX(-70px);
+			}
+		}
+
+		@media screen and (max-width: 719px) {
+			top: 0px;
+
+			&_opened {
+				transform: translateX(-20px);
+			}
+		}
+	}
+
+	&__mob-contacts {
+		display: none;
+
+		@media screen and (max-width: 969px) {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+	}
+
+	&__mob-link {
+		@include text;
+		text-decoration: none;
+		color: #151515;
+	}
+
+	&__burger {
+		display: none;
+		@media screen and (max-width: 969px) {
+			display: block;
+		}
+
+		&-close {
+			display: none;
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			outline: none;
+			border: none;
+			background: none;
+			background-image: url(https://static.tildacdn.com/tild3833-3363-4064-b565-336637393934/cross.svg);
+			transition: 0.3s;
+			cursor: pointer;
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			&:hover {
+				opacity: 0.7;
+				transition: 0.3s;
+			}
+
+			@media screen and (max-width: 969px) {
+				display: initial;
+			}
+		}
 	}
 
 	&__menu {
@@ -23,13 +126,32 @@
 		display: flex;
 		align-items: center;
 		gap: 30px;
+		margin-bottom: 0 !important;
+		padding-left: 0 !important;
+
+		@media screen and (max-width: 1299px) {
+			gap: 20px;
+		}
+
+		@media screen and (max-width: 969px) {
+			flex-direction: column;
+		}
+
+		@media screen and (max-width:719px) {
+			max-width: 90%;
+			text-align: center;
+		}
 	}
 
 	&__link {
-		color: #151515;
-        @include text;
+		color: #151515 !important;
+		@include text;
 		text-decoration: none;
 		transition: 0.3s;
+
+		@media screen and (max-width: 969px) {
+			font-size: 24px !important;
+		}
 
 		&:hover {
 			opacity: 0.7;

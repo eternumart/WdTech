@@ -10,9 +10,30 @@
 	&__slide {
 		display: flex;
 		gap: 20px;
+
+		@media screen and (max-width: 1299px) {
+			height: unset !important;
+		}
+
+		@media screen and (max-width: 719px) {
+			flex-direction: column;
+		}
 	}
 
-	.h2-title {
+	&__image {
+		@media screen and (max-width: 1299px) {
+			max-width: 50%;
+			object-fit: cover;
+			border-radius: 20px;
+		}
+
+		@media screen and (max-width: 719px) {
+			max-width: 100%;
+			max-height: 250px;
+		}
+	}
+
+	.h3-title {
 		margin-bottom: 20px;
 	}
 
@@ -24,6 +45,10 @@
 		cursor: pointer;
 		path {
 			transition: 0.3s;
+		}
+
+		@media screen and (max-width: 719px) {
+			display: none;
 		}
 
 		&:hover {
@@ -48,35 +73,39 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		padding-bottom: 50px;
+
+		@media screen and (max-width: 719px) {
+			padding-bottom: 0;
+		}
 	}
 
 	&__text {
-        @include text;
+		@include text;
 	}
 
 	.swiper-pagination {
 		position: relative;
 		margin-top: 30px;
-        top: unset;
-        bottom: unset;
-        height: 8px;
+		top: unset;
+		bottom: unset;
+		height: 8px;
 
 		&-bullet {
 			background: #c4c4c4;
 			width: 8px;
 			height: 8px;
 			margin: 0 5px !important;
-            transition: .3s;
-            border-radius: 6px !important;
-            top: -6px;
-            position: relative;
+			transition: 0.3s;
+			border-radius: 6px !important;
+			top: -6px;
+			position: relative;
 		}
 
 		&-bullet-active {
-            background: #afd94e;
-            width: 50px;
-            border-radius: 6px !important;
-            transition: .3s;
+			background: #afd94e;
+			width: 50px;
+			border-radius: 6px !important;
+			transition: 0.3s;
 		}
 	}
 }

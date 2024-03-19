@@ -1,3 +1,11 @@
 .main {
     margin-top: 135px;
+
+    @media screen and (max-width: 969px) {
+        margin-top: 95px;
+    }
+
+    @media screen and (max-width: 719px) {
+        margin-top: 80px;
+    }
 }

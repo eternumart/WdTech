@@ -5,4 +5,8 @@
 	line-height: 1.2;
 	transition: .3s;
 	color: #151515;
+
+	@media screen and (max-width: 719px) {
+		font-size: 20px;
+	}
 }

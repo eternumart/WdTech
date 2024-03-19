@@ -6,6 +6,11 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 20px;
+
+		@media screen and (max-width: 719px) {
+			grid-template-columns: 1fr;
+			gap: 50px;
+		}
 	}
 
 	&__list {
@@ -13,6 +18,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+		padding-left: 0 !important;
+		margin-bottom: 0 !important;
 	}
 
 	&__list-item {
@@ -24,7 +31,7 @@
 	&__num {
 		background: #afd94e;
 		color: #fff;
-        @include text;
+		@include text;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -35,14 +42,22 @@
 
 	&__text {
 		color: #fff;
-        @include text;
+		@include text;
 		max-width: 70%;
+
+		@media screen and (max-width: 719px) {
+			max-width: 90%;
+		}
+
+		@media screen and (max-width: 359px) {
+			max-width: 70%;
+		}
 	}
 
 	&__form {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		position: relative;
 	}
 
 	&__input {
@@ -51,35 +66,66 @@
 		border: 2px solid #d1d1d1 !important;
 		border-radius: 8px;
 		background: transparent;
+		@include text;
 		color: #7c7c7c !important;
-		font-size: 16px;
-		font-family: "Manrope";
-		font-weight: 600;
-		line-height: 1.2;
+		outline: none !important;
 	}
 
-	&__checkbox-label {
-		display: flex;
-		gap: 20px;
-		color: #999999;
+	&__label {
 		@include text;
-		position: relative;
+		color: #999999 !important;
+		border-radius: 4px;
 
-		&::after {
-			content: "";
-			position: absolute;
-			width: 30px;
-			height: 30px;
-			border-radius: 4px;
-			border: 2px solid #d1d1d1;
-			box-sizing: border-box;
+		@media screen and (max-width: 719px) {
+			display: flex;
+			align-items: center;
 		}
 	}
 
-	&__checkbox {
-		width: 30px;
-		height: 30px;
-		opacity: 0;
+	&__field {
+		margin-bottom: 20px;
 		position: relative;
 	}
+}
+
+.t-checkbox__indicator {
+	border: 2px solid #d1d1d1 !important;
+	border-radius: 4px !important;
+	opacity: 1 !important;
+	width: 30px;
+	height: 30px;
+
+	&::after {
+		left: 7px !important;
+		top: 1px !important;
+		width: 10px !important;
+		height: 17px !important;
+		border: solid #d1d1d1 !important;
+		border-width: 0 2px 2px 0 !important;
+	}
+}
+
+.t-form__successbox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	padding-top: 28%;
+	border-radius: 10px;
+	margin-bottom: 0 !important;
+}
+
+.t-form__errorbox-middle {
+	display: none !important;
+}
+
+.t-input-error {
+	position: absolute;
+	bottom: -14px;
+	margin: 0 !important;
+	font-family: "Manrope" !important;
+}
+
+.uc-fakeform {
+	display: none !important;
 }

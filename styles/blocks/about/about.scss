@@ -1,10 +1,41 @@
 .about {
     @include container;
 
+    &__left {
+        @media screen and (max-width: 719px) {
+            display: flex;
+            flex-direction: column;
+
+            .h1-title {
+                order: 1;
+            }
+            .about__text {
+                order: 3;
+            }
+            .about__image {
+                order: 2;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
     &__columns{
         display: grid;
         gap: 20px;
         grid-template-columns: auto 692px;
+
+        @media screen and (max-width: 1299px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 719px) {
+            display: flex;
+            flex-direction: column;
+
+            .h1-title {
+                margin-bottom: 20px
+            }
+        }
     }
 
     &__text {
@@ -12,12 +43,20 @@
 
         &_single {
             margin-bottom: 50px;
+
+            @media screen and (max-width: 719px) {
+                margin-bottom: 0;
+            }
         }
     }
 
     &__list {
-        padding-left: 40px;
-        margin-bottom: 20px;
+        padding-left: 40px !important;
+        margin-bottom: 20px !important;
+
+        @media screen and (max-width: 719px) {
+            padding-left: 20px !important;
+        }
     }
 
     &__list-item {
@@ -29,6 +68,10 @@
 
         &_first {
             margin-bottom: 50px;
+
+            @media screen and (max-width: 719px) {
+                margin-bottom: 20px;
+            }
         }
     }
 

@@ -1,20 +1,43 @@
 .button {
 	background: #28b4f9 !important;
-    padding: 12px 40px;
-    @include text;
-    outline: none;
-    border: none;
-    border-radius: 12px;
-    color: #fff !important;
-    transition: .3s;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    width: fit-content;
+	padding: 12px 40px;
+	@include text;
+	outline: none;
+	border: none;
+	border-radius: 12px;
+	color: #fff !important;
+	transition: 0.3s;
+	cursor: pointer;
+	text-decoration: none;
+	display: flex;
+	width: fit-content;
+	height: unset;
 
-    &:hover {
-        background: #AFD94E !important;
-        color: #000 !important;
-        transition: .3s;
-    }
+	@media screen and (max-width:1299px) {
+		padding: 12px 20px;
+	}
+
+	&_header {
+		@media screen and (max-width: 1199px) {
+			display: none;
+		}
+	}
+
+	&_first {
+		@media screen and (max-width: 719px) {
+			display: none;
+		}
+	}
+
+	&:hover {
+		background: #afd94e !important;
+		color: #000 !important;
+		transition: 0.3s;
+	}
+
+	&_form {
+		width: 100%;
+		justify-content: center;
+		border-radius: 8px;
+	}
 }

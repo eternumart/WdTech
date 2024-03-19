@@ -1,17 +1,35 @@
 .product {
 	&__heading {
-		background-image: url(../../../images/materials-bg.png);
+		background-image: url(https://static.tildacdn.com/tild3037-3633-4561-a337-653966663862/materials-bg.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-clip: border-box;
 		width: 100%;
 		padding: 78px 50px;
 		margin-bottom: 20px;
+		border-radius: 20px;
+
+		@media screen and (max-width: 1299px) {
+			
+		}
+
+		@media screen and (max-width: 719px) {
+			padding: 32px 20px 20px 20px;
+			border-radius: 20px;
+		}
 
 		.h1-title {
 			margin-top: unset;
 			margin-bottom: unset;
 			max-width: 610px;
+
+			@media screen and (max-width: 719px) {
+				font-size: 28px;
+			}
+
+			@media screen and (max-width: 359px) {
+				font-size: 24px;
+			}
 		}
 	}
 
@@ -20,8 +38,17 @@
 		padding: 0 50px;
 		margin-bottom: 50px;
 
+		@media screen and (max-width: 719px) {
+			padding: 0 20px;
+		}
+
 		&_popup {
 			padding-left: 0;
+
+			@media screen and (max-width: 719px) {
+				padding: 0;
+				margin-bottom: 20px;
+			}
 		}
 
 		&_subtitle {
@@ -55,10 +82,11 @@
 	}
 
 	&__list {
-		padding-left: 30px;
+		padding-left: 30px !important;
+    	margin-bottom: unset !important;
 
 		&_margin {
-			margin-bottom: 50px;
+			margin-bottom: 50px !important;
 		}
 	}
 
@@ -68,13 +96,20 @@
 }
 
 .variants {
-	border-radius: 20px;
-	padding: 50px;
+	@include container;
 	background: #232323;
-	margin-bottom: 50px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
+
+	@media screen and (max-width: 1019px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media screen and (max-width: 719px) {
+		grid-template-columns: 1fr;
+		margin-bottom: 50px;
+	}
 
 	&__card {
 		background: #fff;
@@ -98,6 +133,10 @@
 
 	.h3-title {
 		margin-bottom: 16px;
+
+		@media screen and (max-width: 719px) {
+			font-size: 24px;
+		}
 	}
 
 	&__description {

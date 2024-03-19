@@ -1,85 +1,148 @@
 .contacts {
-    @include container;
-    margin-bottom: 30px;
+	@include container;
+	margin-bottom: 30px;
 
-    &__top {
-        margin-bottom: 30px;
-    }
+	@media screen and (max-width: 719px) {
+		margin-bottom: 20px;
+	}
 
-    &__content {
-        display: flex;
-        justify-content: space-between;
+	&__top {
+		margin-bottom: 30px;
 
-    }
+		@media screen and (max-width: 719px) {
+			display: flex;
+			justify-content: center;
+		}
+	}
 
-    &__list {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 300px;
-    }
+	&__content {
+		display: flex;
+		justify-content: space-between;
 
-    &__link {
-        @include text;
-        font-size: 24px;
-        color: #151515;
-        text-decoration: none;
-        transition: .3s;
+		@media screen and (max-width: 719px) {
+			flex-direction: column;
+		}
+	}
 
-        &_min {
-            font-size: 16px;
-        }
+	&__list {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		max-width: 300px;
+		margin-bottom: 0 !important;
+		padding-left: 0 !important;
 
-        &:hover {
-            transition: .3s;
-            opacity: 0.7;
-        }
-    }
+		&_mobile {
+			@media screen and (max-width: 719px) {
+				display: none;
+			}
+		}
+	}
 
-    &__right {
-        display: flex;
-        gap: 20px;
-    }
+	&__link {
+		@include text;
+		font-size: 24px;
+		color: #151515 !important;
+		text-decoration: none;
+		transition: 0.3s;
 
-    &__col {
-        max-width: 286px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
+		&_min {
+			font-size: 16px;
+		}
 
-    &__text {
-        @include text;
-        color: #151515;
+		&:hover {
+			transition: 0.3s;
+			opacity: 0.7;
+		}
+	}
 
-        &:first-of-type {
-            margin-bottom: 30px;
-        }
-    }
+	&__right {
+		display: flex;
+		gap: 20px;
 
-    &__wrapper {
-        display: flex;
-    }
+		@media screen and (max-width: 969px) {
+			gap: 10px;
+			flex-direction: column;
+		}
 
-    &__row {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+		@media screen and (max-width: 719px) {
+			gap: 50px;
+		}
+	}
 
-    &__content-col {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+	&__col {
+		max-width: 286px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
 
-        .h1-title {
-            margin-bottom: unset;
-            margin-top: unset;
-        }
+		@media screen and (max-width: 969px) {
+			gap: 5px;
+		}
+	}
 
-        .contacts__text:first-of-type {
-            margin-bottom: unset;
-        }
-    }
+	&__map {
+		width: 100%;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+
+	&__text {
+		@include text;
+		color: #151515;
+
+		&:first-of-type {
+			margin-bottom: 30px;
+
+			@media screen and (max-width: 969px) {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 380px auto;
+		justify-content: space-between;
+		gap: 50px;
+
+		@media screen and (max-width: 1049px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		max-width: 75%;
+
+		@media screen and (max-width: 1049px) {
+			margin-bottom: 50px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__content-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.h1-title {
+			margin-bottom: unset;
+			margin-top: unset;
+
+			@media screen and (max-width: 719px) {
+				margin-bottom: 30px;
+			}
+		}
+
+		.contacts__text:first-of-type {
+			margin-bottom: unset;
+		}
+	}
 }

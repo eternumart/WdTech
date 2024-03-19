@@ -10,4 +10,18 @@
 	span {
 		color: #28b4f9;
 	}
+
+	@media screen and (max-width: 1299px) {
+		margin-top: 0px;
+	}
+
+	@media screen and (max-width: 969px) {
+		line-height: 1;
+	}
+	@media screen and (max-width: 719px) {
+		font-size: 36px;
+	}
+	@media screen and (max-width:359px) {
+		font-size: 32px;
+	}
 }

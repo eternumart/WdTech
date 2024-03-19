@@ -7,6 +7,16 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         list-style: none;
+        padding-left: 0 !important;
+        margin-bottom: 0 !important;
+
+        @media screen and (max-width: 1019px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 719px) {
+            grid-template-columns: 1fr;
+        }
 
         .card {
             background: #fff;
@@ -16,6 +26,10 @@
             flex-direction: column;
             justify-content: space-between;
             gap: 30px;
+
+            &__text {
+                @include text;
+            }
 
             &__top {
                 display: flex;

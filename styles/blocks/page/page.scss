@@ -1,6 +1,7 @@
 .page {
     background: #f1f1f1;
     display: flex;
+    overflow-x: clip;
 
     &_noscroll {
         overflow: hidden;

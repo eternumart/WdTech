@@ -6,6 +6,12 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
 		list-style: none;
+		margin-bottom: 0 !important;
+		padding-left: 0 !important;
+
+		@media screen and (max-width: 719px) {
+			grid-template-columns: 1fr;
+		}
 
 		.card {
 			background: #f9fafb;
