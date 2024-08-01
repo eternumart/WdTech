@@ -10,9 +10,11 @@ burgerLinks.forEach(link => {
 })
 
 function openMenu(){
+    page.style.overflow = "hidden";
     headerContent.classList.add("header__content_opened");
 }
 
 function closeMenu() {
+    page.style.overflow = "unset";
     headerContent.classList.remove("header__content_opened")
 }
