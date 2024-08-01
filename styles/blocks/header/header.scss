@@ -90,6 +90,8 @@
 
 	&__burger {
 		display: none;
+		cursor: pointer;
+		
 		@media screen and (max-width: 969px) {
 			display: block;
 		}
