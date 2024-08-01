@@ -125,10 +125,16 @@
 	}
 
 	&__image {
-		width: 163px;
+		width: 100%;
 		align-self: center;
 		max-height: 180px;
 		object-fit: contain;
+
+		&_mock {
+			height: 180px;
+			object-fit: cover;
+			border-radius: 20px;
+		}
 	}
 
 	.h3-title {
