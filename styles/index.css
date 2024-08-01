@@ -1204,7 +1204,11 @@
   flex-direction: column;
   gap: 20px;
   min-width: 280px;
-  width: 280px;
+}
+@media screen and (min-width: 1019px) {
+  .variants__card {
+    width: 280px;
+  }
 }
 .variants__card_only-text {
   justify-content: space-between;

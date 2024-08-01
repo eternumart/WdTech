@@ -10,7 +10,6 @@
 		border-radius: 20px;
 
 		@media screen and (max-width: 1299px) {
-			
 		}
 
 		@media screen and (max-width: 719px) {
@@ -84,7 +83,7 @@
 
 	&__list {
 		padding-left: 30px !important;
-    	margin-bottom: unset !important;
+		margin-bottom: unset !important;
 
 		&_margin {
 			margin-bottom: 50px !important;
@@ -133,7 +132,10 @@
 		flex-direction: column;
 		gap: 20px;
 		min-width: 280px;
-		width: 280px;
+
+		@media screen and (min-width: 1019px) {
+			width: 280px;
+		}
 
 		&_only-text {
 			justify-content: space-between;
