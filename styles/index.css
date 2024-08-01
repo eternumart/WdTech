@@ -1204,6 +1204,7 @@
   flex-direction: column;
   gap: 20px;
   min-width: 280px;
+  width: 280px;
 }
 .variants__card_only-text {
   justify-content: space-between;
